@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form รับสมัครนักศึกษา</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <p class="eyebrow">ระบบรับสมัครออนไลน์ ภาคเรียนที่ 1 / 2569</p>
+    <h1>สมัครเข้าศึกษาสำหรับ <br> สายวิชาเทคโนโลยีสารสนเทศ</h1>
+    <p class="subtitle">โปรดกรอกข้อมูลให้ครบถ้วน</p>
+
+    <form>
+        <section class="image">
+            <h3>รูปถ่ายผู้สมัคร</h3>
+            <label for="photo">
+                <small>ใช้รูปหน้าตรง พื้นหลังสีสุภาพ ไฟล์ JPG หรือ PNG</small>
+            </label><br><br>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+        </section>
+
+        <section class="info">
+            <h3>ข้อมูลส่วนตัว</h3>
+
+            <label for="firstname">ชื่อ</label><br>
+            <input type="text" id="firstname" name="firstname" required><br>
+
+            <label for="lastname">นามสกุล</label><br>
+            <input type="text" id="lastname" name="lastname" required><br>
+
+            <label for="citizenid">เลขบัตรประชาชน 13 หลัก</label><br>
+            <input type="text" id="citizenid" name="citizenid" maxlength="13" pattern="[0-9]{13}" required><br><br>
+
+            <label>เพศ</label><br>
+            <label><input type="radio" name="gender" value="male" required> ชาย</label><br>
+            <label><input type="radio" name="gender" value="female" required> หญิง</label><br><br>
+
+            <label for="dob">วันเกิด</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="nationality">สัญชาติ</label><br>
+            <input type="text" id="nationality" name="nationality" value="ไทย">
+        </section>
+
+        <section class="body">
+            <h3>น้ำหนัก / ส่วนสูง</h3>
+
+            <label for="weight">น้ำหนัก (กก.)</label><br>
+            <input type="number" id="weight" name="weight" min="30" max="200" step="0.1" required><br>
+
+            <label for="height">ส่วนสูง (ซม.)</label><br>
+            <input type="number" id="height" name="height" min="30" max="250" step="0.1" required><br><br>
+
+            <label>หมู่เลือด <small>(ถ้าทราบ)</small></label><br>
+            <label><input type="radio" name="blood" value="A"> A</label><br>
+            <label><input type="radio" name="blood" value="B"> B</label><br>
+            <label><input type="radio" name="blood" value="AB"> AB</label><br>
+            <label><input type="radio" name="blood" value="O"> O</label>
+        </section>
+
+        <section class="address">
+            <h3>ที่อยู่และการติดต่อ</h3>
+
+            <label for="address">ที่อยู่ตามทะเบียนบ้าน</label><br>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="province">จังหวัด</label><br>
+            <input type="text" id="province" name="province" required><br>
+
+            <label for="zipcode">รหัสไปรษณีย์</label><br>
+            <input type="tel" id="zipcode" name="zipcode" pattern="[0-9]{5}" required><br>
+
+            <label for="email">อีเมล</label><br>
+            <input type="email" id="email" name="email" placeholder="you@gmail.com" required>
+        </section>
+
+        <section class="education">
+            <h3>ประวัติการศึกษา</h3>
+
+            <label for="school">โรงเรียน / สถานศึกษาเดิม</label><br>
+            <input type="text" id="school" name="school" required><br><br>
+
+            <label for="degree">วุฒิการศึกษาที่จบ</label><br>
+            <label><input type="radio" name="degree" value="m3" required> มัธยมศึกษาตอนต้น (ม.3)</label><br>
+            <label><input type="radio" name="degree" value="m6" required> มัธยมศึกษาตอนปลาย (ม.6)</label><br>
+            <label><input type="radio" name="degree" value="pwc" required> ประกาศนียบัตรวิชาชีพ (ปวช.)</label><br>
+            <label><input type="radio" name="degree" value="pws" required> ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</label><br><br>
+
+            <label for="gpa">เกรดเฉลี่ยสะสม (GPAX)</label><br>
+            <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" required>
+        </section>
+
+        <section class="guardian">
+            <h3>ข้อมูลผู้ปกครอง</h3>
+
+            <label for="guardianName">ชื่อ-นามสกุล</label><br>
+            <input type="text" id="guardianName" name="guardianName" required><br>
+
+            <label for="guardianRelation">ความเกี่ยวข้อง</label><br>
+            <input type="text" id="guardianRelation" name="guardianRelation" placeholder="เช่น บิดา มารดา" required><br>
+
+            <label for="guardianPhone">เบอร์โทรผู้ปกครอง</label><br>
+            <input type="tel" id="guardianPhone" name="guardianPhone" pattern="[0-9]{10}" required>
+        </section>
+
+        <section class="major">
+            <h3>เลือกสาขาวิชา</h3>
+            <label><input type="radio" required name="major" value="IT"> IT</label><br>
+            <label><input type="radio" required name="major" value="ITI"> ITI</label><br>
+            <label><input type="radio" required name="major" value="ITT"> ITT</label><br>
+            <label><input type="radio" required name="major" value="INE"> INE</label><br>
+            <label><input type="radio" required name="major" value="INET"> INET</label>
+        </section>
+
+        <section class="submit">
+            <input type="submit" value="submit">
+        </section>
+    </form>
+
+</body>
+</html>
