@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{color: red;}
+        .blue{color: blue;}
+        .font{font-family: Arial, Helvetica, sans-serif;}
+        #big{font-size : 60px;}
+        #small{font-size: 20px;}
+    </style>
+</head>
+<body>
+    <h1 class="red">Drop Down list</h1>
+    <h2 class="blue">Drop Down list</h2>
+    <select name="subject" id="subject">
+
+        <optgroup label="รายวิชาเทคโนโลยีสารสนเทศ">
+            <option value="compro">Compro</option>
+            <option value="INTRO">Intro</option>
+        </optgroup>
+        <optgroup label="รายวิชาทั่วไป">
+            <option value="MATH">Math</option>
+            <option value="ENG">Eng</option>
+         </optgroup>
+        
+
+    </select>
+
+    <h1 class="big">table</h1>
+    <table border ="1">
+        <tr>
+            <th>STU ID</th>
+            <th>NAME</th>
+            <th>MAJOR</th>
+            <th>DEPT</th>
+        </tr>
+        <tr>
+            <td colspan="2">1,2</td>
+            <!--td>2</td-->
+            <td colspan="2" rowspan="8">
+                3,4 <br>7,8 <br>11,12 <br>15,1
+                <tr>
+        
+        <tr>
+            <td rowspan="2">
+            5 <br>
+            9
+            </td>
+            <th>6</th>
+            
+            
+        </tr>
+        <tr>
+            <th>9</th>
+            
+        </tr>
+        <tr>
+            <th>13</th>
+            <th>14</th>
+        
+        </tr>
+</body>
+</html>
